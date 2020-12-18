@@ -3,7 +3,13 @@ package org.unit;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +30,7 @@ public class BaseClass1 {
 	public static void launchUrl(String url) {
 		driver.get(url);
 	}
-
+    
 	public static void maxBrowser() {
 		driver.manage().window().maximize();
 	}
@@ -65,7 +71,19 @@ public class BaseClass1 {
 	public static void byVisibleText(String text) {
 		s.selectByVisibleText(text);
 	}
+	public static String readFromExcel(int rowNo, int cellNo) throws IOException {
+		// 1.File Location:
+		File f = new File("C:\\Users\\Ramesh Veer\\eclipse-workspace\\DataDriven\\excelbook\\excelworkdata.xlsx");
+        // 2.Read from File:
+		FileInputStream fin = new FileInputStream(f);
+		return null;
+		
+	}
+
+
+
 
 	
 
 }
+
