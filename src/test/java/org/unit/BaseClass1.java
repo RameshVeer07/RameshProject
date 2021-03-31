@@ -47,12 +47,7 @@ public class BaseClass1 {
 		e.sendKeys(value);
 	}
 
-	public static void btnClick(WebElement tap) {
-		tap.click();
-	}
-	public static void select(WebElement dd) {
-		s = new Select(dd);
-	}
+	
 
 	public static void byValue(String value) {
 		s.selectByValue(value);
@@ -64,6 +59,12 @@ public class BaseClass1 {
 
 	public static void byVisibleText(String text) {
 		s.selectByVisibleText(text);
+	}
+	public static void btnClick(WebElement tap) {
+		tap.click();
+	}
+	public static void select(WebElement dd) {
+		s = new Select(dd);
 	}
 
 	
